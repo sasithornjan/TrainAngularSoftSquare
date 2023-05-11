@@ -1,0 +1,43 @@
+<!-- <div>
+    <h1>Parent Title</h1>
+    <p>body text...</p>
+    <app-cchild [reviews]="books[0].bookReviews"></app-cchild>
+</div> -->
+
+
+<!-- <div>
+    <h1>Parent</h1>
+    
+    <app-cchild (notify)="onNotifyClicked($event)"> </app-cchild>
+    <p>{{ showMessage }}</p>
+</div> -->
+
+<!-- Workshop -->
+ <div> 
+    <h1>Moive</h1>
+    <form [formGroup] = "form">
+        <input formControlName="movie" (keyup)="submitForm()" >
+    <app-cchild (movieData)="onClicked($event)" [movie]="Movieid"> </app-cchild>
+    </form>
+</div> 
+<div>
+    <table style="border: 1px solid black;" >
+        <thead>
+          <tr style="border: 1px solid black;text-align: center;" >
+            <th>NameMovie</th>
+            <th>TypeMovie</th>
+            <th>MoviePrice</th>
+            <th>Movieid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid black;text-align: center;">{{ listmovie?.NameMovie }}</td>
+            <td style="border: 1px solid black;text-align: center;">{{ listmovie?.TypeMovie }}</td>
+            <td style="border: 1px solid black;text-align: center;">{{ listmovie?.MoviePrice }}</td>
+            <td style="border: 1px solid black;text-align: center;">{{ listmovie?.Movieid }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<!-- Workshop -->
